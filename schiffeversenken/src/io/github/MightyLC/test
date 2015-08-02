@@ -1,2 +1,20 @@
-TEST
-supi :)
+schiffeversenken
+gui für bis zu 4 spieler (also wählbar 2 bis 4 spieler)
+
+client server system
+wir werden es von anfang an so programmieren das es halbwegs professionell ist
+das macht mehr arbeit aber dafür haben wir auch savegames und es können mehrere partien gleichzeitig am server gespielt werden
+
+
+client klasse:
+der client startet das spiel, muss sich einen namen aussuchen oder eingeben der wird zum server geschickt, er bekommt automatisch ein 3 stelliges passwort generiert; das passwort wird local gespeichert, in dem ordner wo sich auch das spiel befindet
+
+
+server klasse:
+der server läuft sozusagen die ganze zeit (mit dyndns) und hat nen port offen und lauscht ob ein client sich in das spiel einloggen will
+wenn ja kommt der client in die lobby, dort kann er ein spiel erstellen oder ein savegame laden und die andere lobbyteilnehmer können reinjoinen
+savegames: am server muss es die möglichkeit geben in eine datei zu schreiben
+dort wird hineingeschrieben eine zufällig generierte spielid und die namen der leute die in dieser partie mitspielen und die settings (feldgröse; position der schiffe treffer und nichttreffer ect, aktuelle runde (wer ist drann) ect
+die spielid wird auch am client rechner gespeichert, der der erstellt hat kann dann dieses savegame laden und muss halt warten bis alle vorigen spieler auch in seiner game lobby sind
+
+
