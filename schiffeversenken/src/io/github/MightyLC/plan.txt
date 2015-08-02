@@ -18,3 +18,23 @@ dort wird hineingeschrieben eine zufällig generierte spielid und die namen der l
 die spielid wird auch am client rechner gespeichert, der der erstellt hat kann dann dieses savegame laden und muss halt warten bis alle vorigen spieler auch in seiner game lobby sind
 
 
+Gui für den Client: (noch nicht ganz ausgereift)
+anmeldescreen:
+hier gibts eine dropbox wo man alle user findet die sich hier mal angemeldet haben
+es gibt jedoch einen hauptuser und dessen passwort ist auch gespeichert
+alle anderen müssen ihr 3 stelliges passwort selbst eingeben
+
+lobbyscreen:
+im lobbyscreen sieht man links den großen chat
+rechts oben sieht man die leute die eingeloggt sind
+rechts mitte sieht man die gestartetten spiele mit ein bischen details
+rechts unten hat man einen knopf zum joinen oder selberstarten oder savegameladen
+
+gamescreen:
+verfügt von anfang an über 4 tabellenartige objekte deren gröse und position zur laufzeit angepasst wird
+je nach 2 spieler, 3 spieler oder 4 spieler
+unter diesen objekten befindet sich der chat
+alle die im spiel sind können hier miteinenander chatten
+oben gibt es noch ein statusfeld das dir anzeigt wer gerade drann ist, was der letzte gemacht hat und wann du drann bist, ein art histoy feld
+
+
