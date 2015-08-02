@@ -5,6 +5,7 @@ import io.github.craftqq.utility.Observable;
 import io.github.craftqq.utility.ObservableObserver;
 import io.github.craftqq.utility.Observer;
 
+import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
@@ -48,7 +49,7 @@ public class Server extends Thread implements ObservableObserver
 		{
 			server = new ServerSocket(port);
 		}
-		catch(Exception e)
+		catch(IOException e)
 		{
 			e.printStackTrace();
 			System.out.println();
@@ -63,7 +64,7 @@ public class Server extends Thread implements ObservableObserver
 			{
 				so = server.accept();
 			}
-			catch(Exception e)
+			catch(IOException e)
 			{
 				e.printStackTrace();
 				continue;
