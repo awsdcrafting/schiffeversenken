@@ -58,7 +58,7 @@ public class Fenster extends JFrame
         System.out.println("Hier ist noch nichts.");}});
         JMenuItem about = new JMenuItem("About   ");
         about.addActionListener(new ActionListener(){public void actionPerformed(ActionEvent e){
-        System.out.println("Dies ist ein Weltraumstrategiespiel.");
+        System.out.println("Willkommen zu Schiffe versenken!");
         System.out.println("Version: ");}});
 
         
