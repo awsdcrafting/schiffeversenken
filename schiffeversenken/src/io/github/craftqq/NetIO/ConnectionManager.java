@@ -22,6 +22,7 @@ public class ConnectionManager extends Thread implements Observable
 	{
 		socket = socket_;
 		identifier = identifier_;
+		observers = new ArrayList<Observer>();
 	}
 	
 	public ConnectionManager(Socket client)
@@ -91,7 +92,14 @@ public class ConnectionManager extends Thread implements Observable
 				}
 				else
 				{
-					Thread.sleep(500);
+					try
+					{
+						Thread.sleep(50);
+					}
+					catch(InterruptedException IE)
+					{
+						
+					}
 				}
 			}
 			catch(Exception e)
