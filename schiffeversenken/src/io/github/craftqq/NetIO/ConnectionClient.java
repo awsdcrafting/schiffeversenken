@@ -9,7 +9,7 @@ import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.ArrayList;
 
-public class Client extends Thread implements Observable
+public class ConnectionClient extends Thread implements Observable
 {
 	protected Socket socket;
 	protected boolean connected;
@@ -19,14 +19,14 @@ public class Client extends Thread implements Observable
 	protected int port;
 	private ArrayList<Observer> observers;
 	
-	public Client(String host_, int port_)
+	public ConnectionClient(String host_, int port_)
 	{
 		host = host_;
 		port = port_;
 		observers = new ArrayList<Observer>();
 	}
 	
-	public Client(String host_)
+	public ConnectionClient(String host_)
 	{
 		this(host_, 55055);
 	}

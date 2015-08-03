@@ -11,7 +11,7 @@ import java.net.Socket;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class Server extends Thread implements ObservableObserver
+public class ConnectionServer extends Thread implements ObservableObserver
 {
 	protected ServerSocket server;
 	protected boolean running;
@@ -22,12 +22,12 @@ public class Server extends Thread implements ObservableObserver
 	private ArrayList<Observer> observers;
 	
 	
-	public Server()
+	public ConnectionServer()
 	{
 		this(55055);
 	}
 	
-	public Server(int port_)
+	public ConnectionServer(int port_)
 	{
 		connections = new HashMap<Integer, ConnectionManager>();
 		clientNames = new BidirectionalMap<Integer, String>();
