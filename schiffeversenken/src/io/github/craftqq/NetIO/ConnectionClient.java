@@ -109,7 +109,7 @@ public class ConnectionClient extends Thread implements Observable
 							connected = false;
 						}
 					}
-					String cs = "REMOTE:" + s + ";ID:LOCAL";
+					String cs = "REMOTE:" + s + ";ID:SERVER";
 					for(Observer o:observers)
 					{
 						o.notify(cs,this);
