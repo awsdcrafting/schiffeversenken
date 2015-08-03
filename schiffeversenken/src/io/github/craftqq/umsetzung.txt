@@ -1,0 +1,29 @@
+spiel wird über Main gestartet; mit argument "-server" (oder ähnlich) wird der server statt client aufgerufen
+
+spielstände lassen sich (mit struktur) einfach speichern / lesen (nach name / datum / urzeit / ersteller etc benannt / sortiert oder sonstiges)
+
+client generiert beim ersten start eine UUID (16byte / 128bit random; sollte einzigartig sein :) ) nach dieser werden dann die clients sortiert
+dadurch kann sich jeder den namen aussuchen (und ändern), wenn er möchte. Andere clients bekommen vom server nur eine hash zugeschickt;
+diese wird durch die UUID generiert (die UUID lässt sich aber NICHT mit der hash erzeugen); die UUID wird im home-ordner gespeichert.
+
+server offen & lauschen ist standard server in java (für IP und co ist der router zuständig; da kann kein programm was machen):
+
+ServerSocket serv = new ServerSocket (int port); // port ist der gewünschte port
+while(running)									 //während der server läuft
+{
+	Socket clientConnection;					 //verbindung zu einem client
+	try
+	{
+		clientConnection = serv.accept();		 //versuch, eine verbindung aufzubauen (wartet, bis eine verbindung existiert)
+	}
+	catch(IOException IOE)						 //falls beim aufbau was schief geht / timeout
+	{
+		continue;								 //keine verbindung, überspringe die nächsten schritte
+	}
+	
+	//mache irgendwas mit der verbindung... wie nachricht(en) an client schicken, andere prozesse benachrichtigen, etc
+}
+
+client ruft halt nach servernachrichten die gewünschten GUIs auf / schickt die aktionen an den server
+
+spielstände werden auf dem server gespeichert; der client bekommt nach dem joinen eine liste (der server speichert die erstellten / beigetretenen spiele)
