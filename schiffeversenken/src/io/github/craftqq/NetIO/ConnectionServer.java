@@ -43,6 +43,16 @@ public class ConnectionServer extends Thread implements ObservableObserver
 		return i;
 	}
 	
+	public void closeConnection(int id)
+	{
+		ConnectionManager c = connections.remove(id);
+		if(c!=null)
+		{
+			c.send("CONNECTION:CLOSE");
+			c.closeConnection();
+		}
+	}
+	
 	public void run()
 	{
 		try

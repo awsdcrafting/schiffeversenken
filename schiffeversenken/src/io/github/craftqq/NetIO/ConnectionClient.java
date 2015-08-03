@@ -117,7 +117,14 @@ public class ConnectionClient extends Thread implements Observable
 				}
 				else
 				{
-					Thread.sleep(100);
+					try
+					{
+						Thread.sleep(50);
+					}
+					catch(InterruptedException IE)
+					{
+						
+					}
 				}
 			}
 			catch(Exception e)
