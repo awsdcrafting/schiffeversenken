@@ -5,7 +5,12 @@ import io.github.craftqq.utility.Observer;
 
 public class Client implements Observer
 {
-
+	
+	public Client()
+	{
+		
+	}
+	
 	@Override
 	public void notify(String message, Observable source) 
 	{
