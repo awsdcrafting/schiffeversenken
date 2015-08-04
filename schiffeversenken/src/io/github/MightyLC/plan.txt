@@ -23,6 +23,7 @@ anmeldescreen:
 hier gibts eine dropbox wo man alle user findet die sich hier mal angemeldet haben
 es gibt jedoch einen hauptuser und dessen passwort ist auch gespeichert
 alle anderen müssen ihr 3 stelliges passwort selbst eingeben
+3 Knöpfe: Anmelden; Als Standard User; Entfernen
 
 lobbyscreen:
 im lobbyscreen sieht man links den großen chat
