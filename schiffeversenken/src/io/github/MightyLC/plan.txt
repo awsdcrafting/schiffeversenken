@@ -35,6 +35,7 @@ spielerstellungs-screen:
 A) ersteller:
 links unten hat man den spiel chat
 links oben kann man ein passwort für den host setzten
+man kann auswählen ob savegames erlaubt sind; man kann ein zeitlimit festlegen bis wann ein spieler geschossen  haben muss  min10 max30 sekunden
 links oben kann man in einer textbox x und y range auswählen; minimum 8 maximum 16
 dann kann man in 4 textboxen die anzahl der 5er 4er 3er und 2er schiffe auswählen; minimum 1; maximum 3
 dann wählt man in einer combobox den spielmodus aus: klassisch; modern; ultra (nach der auswahl steht unten in einem label eine kleine beschreibung des modus)
