@@ -33,22 +33,24 @@ rechts unten hat man einen knopf zum joinen oder selberstarten oder savegamelade
 nachdem man ein spiel erstellt hat oder gejoint ist kommt der
 spielerstellungs-screen:
 A) ersteller:
-unten hat man den spiel chat
+links unten hat man den spiel chat
+links oben kann man ein passwort für den host setzten
 links oben kann man in einer textbox x und y range auswählen; minimum 8 maximum 16
 dann kann man in 4 textboxen die anzahl der 5er 4er 3er und 2er schiffe auswählen; minimum 1; maximum 3
 dann wählt man in einer combobox den spielmodus aus: klassisch; modern; ultra (nach der auswahl steht unten in einem label eine kleine beschreibung des modus)
-rechts hat man ein tabellenartiges objekt in dem man seine schiffe platziert mittels mausklick; solange die schiffe nicht passen wird in einem label darunter invallid angezeigt;
+rechts oben hat man ein tabellenartiges objekt in dem man seine schiffe platziert mittels mausklick; solange die schiffe nicht passen wird in einem label darunter invallid angezeigt;
 sobald die schiffe passen wird valid reingeschrieben
+links unten hat man ein fenster in dem die spieler angezeigt werden die gerade in der game lobby sind (auswahlbox; maximal 4 spieler); der creator kann spieler mit einem knopf kicken 
 B) partizipant:
 der partizipant kann keine spieleinstellugnen verändern aber er sieht sie zumindest ausgegraut; 
 das tabellenartige objekt kann er naturlich ändern
-unten wie gewohnt der spiel chat
 starten kann der ersteller erst wenn bei allen valid steht und alle auf bereit geklickt haben
 
 gamescreen:
 verfügt von anfang an über 4 tabellenartige objekte deren gröse und position zur laufzeit angepasst wird
 je nach 2 spieler, 3 spieler oder 4 spieler
 unter diesen objekten befindet sich der chat
+bei 3 spielern befindet sich der chat rechts unten
 alle die im spiel sind können hier miteinenander chatten
 oben gibt es noch ein statusfeld das dir anzeigt wer gerade drann ist, was der letzte gemacht hat und wann du drann bist, ein art histoy feld
 mit einem mausklick auf das tabellenartige objekt kannst du sofern du drann bist die waffe abfeuern
