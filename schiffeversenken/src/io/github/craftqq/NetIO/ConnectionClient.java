@@ -98,9 +98,9 @@ public class ConnectionClient extends Thread implements Observable
 			String s = "";
 			try
 			{
-				if(br.ready())
+				s = br.readLine();
+				if(s != null)
 				{
-					s = br.readLine();
 					if(s.toLowerCase().toUpperCase().startsWith("CONNECTION"))
 					{
 						String sc = s.substring(11);

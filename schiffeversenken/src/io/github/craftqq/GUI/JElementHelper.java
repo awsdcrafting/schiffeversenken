@@ -180,12 +180,24 @@ public class JElementHelper
         comboBox.setVisible(true);
         return comboBox;
     }
-    
+    /**
+     * erzeugt eine Liste für objekte vom typ <T>
+     * @param x die x-Position der liste
+     * @param y die y-Position der liste
+     * @return
+     */
     public static <T> JList<T> baueList(int x, int y)
     {
     	return baueList(x, y, 140, 35);
     }
-    
+    /**
+     * erzeugt eine Liste für objekte vom typ <T>
+     * @param x die x-Position der liste
+     * @param y die y-Position der liste
+     * @param xSize die groesse der liste in x-richtung
+     * @param ySize die groesse der liste in y-richtung
+     * @return
+     */
     public static <T> JList<T> baueList(int x, int y, int xSize, int ySize)
     {
         JList<T> list = new JList<T>();

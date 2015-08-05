@@ -8,6 +8,11 @@ import java.util.ArrayList;
 public class DateiLeser 
 {
 	
+	private DateiLeser()
+	{
+		
+	}
+	
 	public static String[] leseDatei(String name)
 	{
 		ArrayList<String> al = new ArrayList<String>();

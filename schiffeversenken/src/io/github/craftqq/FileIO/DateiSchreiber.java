@@ -7,6 +7,11 @@ import java.io.FileWriter;
 public class DateiSchreiber 
 {
 	
+	private DateiSchreiber()
+	{
+		
+	}
+	
 	public static void schreibeDatei(String name, String[] inhalt)
 	{
 		try

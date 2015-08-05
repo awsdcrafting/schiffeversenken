@@ -7,12 +7,16 @@ import io.github.craftqq.FileIO.DateiSchreiber;
 
 public class Client implements Observer
 {
-	String ReadedFile;
+	String[] readedFile;
 	
 	public Client()  //das ist der konstruktor
-	{		
-		DateiLeser myLeserling;
-		myLeserling.leseDatei("User.txt",ReadedFile);
+	{
+		/*
+		 * Kommentar von craftqq:
+		 * DateiLeser.leseDatei(String name) ist eine statische methode, ein Objekt vom typ dateiLeser zu erzuegen ist nicht nötig
+		 * die methode gibt ein Array an Strings zurück, nicht einen einzigen String (pro zeile ein string)
+		 */
+		readedFile = DateiLeser.leseDatei("User.txt");
 		
 		/*Dateiformat/Zeilenformat: USERID;Name;3stelliges Passwort 
 		1. Zeile Hauptuser auf dem PC
@@ -22,7 +26,7 @@ public class Client implements Observer
 	
 	public void SaveUserAndPW ()
 	{
-		DateiSchreiber mySchreiberling;
+		
 	}
 	
 	@Override
