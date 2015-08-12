@@ -44,7 +44,7 @@ public class ConnectionClient extends Thread implements Observable
 	
 	public void send(String s)
 	{
-		pw.write(s);
+		pw.println(s);
 	}
 	
 	public synchronized String receive()

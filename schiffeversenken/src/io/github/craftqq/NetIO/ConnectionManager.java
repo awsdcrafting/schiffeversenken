@@ -4,6 +4,7 @@ import io.github.craftqq.utility.Observable;
 import io.github.craftqq.utility.Observer;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
@@ -58,7 +59,7 @@ public class ConnectionManager extends Thread implements Observable
 	
 	public void send(String s)
 	{
-		pw.write(s);
+		pw.println(s);
 	}
 	
 	public void run()
@@ -80,11 +81,12 @@ public class ConnectionManager extends Thread implements Observable
 		alive = true;
 		while(alive)
 		{
+			String s = "";
 			try
 			{
-				if(br.ready())
+				s = br.readLine();
+				if(s != null)
 				{
-					String s = br.readLine();
 					for(Observer o: observers)
 					{
 						o.notify(s, this);
@@ -98,13 +100,13 @@ public class ConnectionManager extends Thread implements Observable
 					}
 					catch(InterruptedException IE)
 					{
-						
+						IE.printStackTrace();
 					}
 				}
 			}
-			catch(Exception e)
+			catch(IOException IOE)
 			{
-				e.printStackTrace();
+				IOE.printStackTrace();
 			}
 		}
 		return;
