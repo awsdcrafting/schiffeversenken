@@ -84,7 +84,7 @@ public class ConnectionClient extends Thread implements Observable
 		}
 		try
 		{
-			pw = new PrintWriter(socket.getOutputStream());
+			pw = new PrintWriter(socket.getOutputStream(), true);
 			br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 		}
 		catch(Exception e)
